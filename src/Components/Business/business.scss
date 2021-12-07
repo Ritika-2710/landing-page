@@ -1,0 +1,127 @@
+.business{
+  padding-top: 100px;
+  padding-bottom: 50px;
+  .business-image{
+    position: relative;
+    .business-main-image
+    {
+      width: 100%;
+    }
+    .business-sub-image1{
+      position: absolute;
+      left: -6%;
+      top: -5%;
+      z-index: -1;
+    }
+    .business-sub-image2{
+      position: absolute;
+      left:-10%;
+      top:55%;
+      z-index: -1;
+    }
+    .business-card{
+      position: absolute;
+      right: 0;
+      bottom: -25px;
+      color: #ffffff;
+      padding: 20px 30px;
+      background: orangered;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      box-shadow: 0 24px 94px rgba(239 ,67, 57 , 0.4);
+      border-radius: 8px;
+      width: 280px;
+      height: 180px;
+      div{
+        display: flex;
+        align-items: center;
+        h1{
+        }
+        span{
+          width: 30px;
+          height: 30px;
+          background: #000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 25px;
+        }
+      }
+      p{
+        font-size: 22px;
+      }
+    }
+    .business-sub-image3{
+      position: absolute;
+      right:29%;
+      top: -10%;
+      z-index: -1;
+    }
+    @media (max-width: 1200px)
+    {
+      .business-sub-image3{
+        right: 1%;
+      }
+      .business-card{
+        right: -20%;
+      }
+    }
+    @media (max-width: 992px)
+    {
+      .business-sub-image3{
+        right: 35%;
+      }
+      .business-card{
+        right: 20%;
+      }
+    }
+    @media (max-width: 770px)
+    {
+      .business-sub-image3{
+        right: 12%;
+      }
+      .business-card{
+        right: -8%;
+      }
+    }
+  }
+
+  .business-text
+  {
+    h1{
+      font-size: 3.5rem;
+      padding-right: 33%;
+    }
+    p{
+      font-size: 18px;
+      padding-right: 27%;
+      color:rgba(37, 55, 63, 0.7);
+    }
+  }
+  @media (max-width: 1200px)
+  {
+    .business-text{
+      h1{
+        padding-right: 25%;
+      }
+      p{
+        padding-right: 25%;
+      }
+    }
+  }
+  @media (max-width: 991px)
+  {
+    .business-text{
+      margin-top: 50px;
+      h1{
+        font-size:2.5rem;
+        padding-right: 10%;
+      }
+      p{
+        font-size: 17px;
+        padding-right: 10%;
+      }
+    }
+  }
+}

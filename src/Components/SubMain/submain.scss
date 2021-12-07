@@ -1,0 +1,53 @@
+.submain
+{
+  margin-top: 10%;
+  padding-bottom: 100px;
+  border-top: 1px solid #D3D3D3;
+  position: relative;
+  .submain-image
+  {
+    position: absolute;
+    top:250px;
+    z-index: -1;
+  }
+  .submain_container
+  {
+    margin-top: 10%;
+    background: white;
+    .submain-heading
+    {
+      padding-right:8% ;
+      h1{
+        font-size: 3.5rem;
+      }
+    }
+    .submain-text
+    {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p{
+        font-size: 22px;
+        padding-right:25%;
+        padding-left: 15%;
+      }
+    }
+    @media (max-width: 991px) {
+      .submain-heading{
+        padding: 0;
+
+        h1{
+          text-align: center;
+        }
+      }
+      .submain-text{
+        p{
+          text-align: center;
+          padding: 0;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+}

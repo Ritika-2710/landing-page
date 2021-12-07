@@ -1,0 +1,123 @@
+.footer{
+  position: relative;
+  .footer-image
+  {
+    position: absolute;
+    left: 0;
+    top:0;
+  }
+  background: #6a26da;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  .footer-heading{
+    h1{
+      text-align: center;
+      font-size: 60px;
+      color:white;
+    }
+
+  }
+  @media (max-width: 540px) {
+    .footer-heading{
+      h1{
+        font-size: 45px;
+      }
+    }
+  }
+  .footer-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    input{
+      width: 320px;
+      padding: 20px 25px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+    }
+    button{
+      background: orangered;
+      color:white;
+      margin-left: 20px;
+      padding: 20px 20px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+    }
+  }
+  @media (max-width: 540px) {
+    .footer-input{
+      input{
+        width: 90%;
+      }
+    }
+  }
+  @media (max-width: 530px) {
+    .footer-input{
+      display: block;
+      button{
+        margin-top: 15px;
+        margin-left: 0;
+        width: 90%;
+      }
+    }
+  }
+  .footer-description{
+    display: flex;
+    justify-content: center;
+    color:#fff;
+    margin-top: 5%;
+    .footer-part1{
+        color:#fff;
+      p{
+        color:#fff;
+        font-size: 18px;
+        padding-right: 10%;
+        margin-top: 20px;
+      }
+    }
+    .footer-part2{
+      ul{
+        list-style: none;
+        padding: 0;
+        li:first-child{
+          margin-top: 20px;
+        }
+        li{
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    @media (max-width: 768px)
+    {
+      .footer-part2{
+        margin-top: 50px;
+      }
+      .footer-part3{
+        margin-top: 40px;
+      }
+      .footer-part4{
+        margin-top: 50px;
+      }
+    }
+    .footer-part4{
+      span{
+        display: flex;
+        p{
+          font-size: 18px;
+          margin-bottom: 0;
+        }
+      }
+      .fa{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:#fff;
+        margin-right: 20px;
+        font-size: 18px;
+      }
+    }
+  }
+}

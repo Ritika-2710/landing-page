@@ -1,0 +1,13 @@
+.counter{
+  .counter-container{
+    border-top: 1px solid lightgray;
+    padding: 150px 0;
+    .counter-text{
+      font-size: 24px;
+      padding-right: 40%;
+      margin-top: 15px;
+      color:rgba(37, 55, 63, 0.7);
+      font-weight: 600;
+    }
+  }
+}

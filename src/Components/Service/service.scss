@@ -1,0 +1,120 @@
+.service{
+  //background: #f8f9fc;
+  padding-top:120px ;
+  .service-text
+  {
+     h1{
+       padding-right: 30%;
+       font-size: 50px;
+     }
+    p{
+      font-size: 18px;
+      color: rgba(37, 55, 63, 0.7);
+      padding-right: 35%;
+    }
+    @media (max-width: 767px)
+    {
+      h1{
+        font-size: 40px;
+        padding-right: 15%;
+      }
+      p{
+        padding-right: 10%;
+      }
+    }
+  }
+  .service-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .service-div-card{
+      width: 400px;
+      background-color: white;
+      height: 400px;
+      border-radius: 8px;
+      box-shadow: 1px 3px 3px 3px lightgray;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .service-div{
+        width: 300px;
+        height: 100px;
+        padding:10px;
+        text-align: center;
+      }
+      .service-div:first-child{
+        border-bottom: 1px dashed lightgray;
+      }
+      .special-div{
+        margin-top: 30px;
+        background: #22cc74;
+        width: 80%;
+        text-align: center;
+        padding: 15px 20px;
+        color: #fff;
+        border-radius: 8px;
+      }
+    }
+    .service-images{
+      .service-image1{
+        top:-8%;
+        right: 15%;
+        position: absolute;
+        z-index: -1;
+      }
+      .service-image2{
+        left: 4%;
+        top:20%;
+        position: absolute;
+        z-index: -1;
+      }
+      @media (min-width: 993px) and (max-width: 1284px)
+      {
+        .service-image1{
+          top:-8%;
+          right: 0%;
+          position: absolute;
+          z-index: -1;
+        }
+        .service-image2{
+          left: -10%;
+          top:20%;
+          position: absolute;
+          z-index: -1;
+        }
+      }
+      @media (max-width: 784px)
+      {
+        .service-image1{
+          top:-8%;
+          right: 10%;
+          position: absolute;
+          z-index: -1;
+        }
+        .service-image2{
+          left: 10%;
+          top:20%;
+          position: absolute;
+          z-index: -1;
+        }
+      }
+      @media (max-width: 767px)
+      {
+        .service-image1{
+          top:-8%;
+          right: 0;
+          position: absolute;
+          z-index: -1;
+        }
+        .service-image2{
+          left: -3%;
+          top:20%;
+          position: absolute;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}

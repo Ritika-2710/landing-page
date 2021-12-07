@@ -1,0 +1,137 @@
+.main{
+  margin-top: 8%;
+  .main-firstpart {
+    .main-headings {
+      h1 {
+        margin-bottom: 0;
+        font-size: 4.5rem;
+      }
+    }
+
+    .sub-text {
+      font-size: 20px;
+      color: darkgray;
+      padding-right: 37%;
+    }
+
+    .valueinput {
+      input {
+        width: 50%;
+        padding: 15px 25px;
+        border: 1px solid lightgrey;
+        border-radius: 8px;
+      }
+
+      .main-button {
+        border: none;
+        outline: none;
+        border-radius: 25px;
+        background-color: rebeccapurple;
+        padding: 10px 15px;
+        color: white;
+        margin-left: 10px;
+      }
+    }
+
+    .span-text {
+      span {
+        color: orangered;
+      }
+    }
+  }
+  .main-secondpart {
+    position: relative;
+
+      .main-image {
+        z-index: 100;
+        .image {
+          width: 100%;
+        }
+      }
+
+      .sub-image {
+        position: absolute;
+        top: -25px;
+        left: 5px;
+        width: 150px;
+        height: 150px;
+        img
+        {
+          width: 100%;
+        }
+      }
+    .sub-image2
+    {
+      position: absolute;
+      top:170px;
+      left: 0;
+      z-index: -1;
+    }
+    .sub-image5
+    {
+      position: absolute;
+      bottom: -65px;
+      right:200px;
+      width: 150px;
+      height: 150px;
+      z-index: -1;
+      img
+      {
+        width: 100%;
+      }
+    }
+    .sub-image3
+    {
+      position: absolute;
+      bottom: -100px;
+      right:5px;
+      width: 180px;
+      height: 180px;
+      z-index: -1;
+      img
+      {
+        width: 100%;
+      }
+    }
+    .sub-image4
+    {
+      position: absolute;
+      top:170px;
+      right: -30px;
+      width: 150px;
+      height: 150px;
+      z-index: -1;
+      img
+      {
+        width: 100%;
+      }
+    }
+    .sub-image6
+    {
+      position: absolute;
+      top:-115px;
+      right: 200px;
+      width: 150px;
+      height: 150px;
+      z-index: -1;
+      img
+      {
+        width: 100%;
+      }
+    }
+    }
+  @media (max-width: 992px) {
+    .main-firstpart
+    {
+      order:2;
+      margin-top: 15%;
+      margin-left: 10%;
+    }
+
+    .main-secondpart
+    {
+      order:1;
+      margin-top: 12%;
+    }
+  }
+}
