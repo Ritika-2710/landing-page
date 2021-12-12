@@ -23,7 +23,7 @@ const Main = ({main_data}) =>
                             <input type="text" placeholder={main_data.input}/>
                             <button className="main-button">Start for free</button>
                         </div>
-                        <p className="para-text span-text mt-3">By clicking the button, you are agreeing with our <span>Terms and Conditions.</span></p>
+                        {/*<p className="para-text span-text mt-3">By clicking the button, you are agreeing with our <span>Terms and Conditions.</span></p>*/}
                     </Col>
                     <Col lg={6} className="main-secondpart">
                         <div className="main-image">

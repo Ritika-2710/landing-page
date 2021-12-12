@@ -33,6 +33,17 @@
         margin-left: 10px;
       }
     }
+    @media(max-width: 560px) {
+       .valueinput{
+          input{
+            width: 80%;
+            margin-bottom: 20px;
+          }
+         .main-button{
+           margin: 0;
+         }
+       }
+    }
 
     .span-text {
       span {
@@ -243,6 +254,9 @@
       .sub-image3{
         width: 100px;
         bottom: -135px;
+      }
+      .sub-image4{
+        display: none;
       }
     }
 
