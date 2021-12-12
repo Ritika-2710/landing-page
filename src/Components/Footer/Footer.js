@@ -1,53 +1,45 @@
 import {Col, Container, Row} from "react-bootstrap";
 import "./footer.scss"
-const Footer = () => {
+const Footer = ({footer}) => {
     return(
         <section className="footer">
             <div className="footer-image">
-              <img src={"/Images/footer.png"} alt={"Image not found"}/>
+              <img src={footer.image} alt={"Image not found"}/>
             </div>
             <Container>
                 <Row>
                     <Col className="footer-heading">
-                        <h1>It’s easy to get<br/>
-                            started. Start now.
-                        </h1>
+                        <h1 dangerouslySetInnerHTML={{__html:footer.title}}/>
                     </Col>
                 </Row>
                 <Row>
                     <Col className="footer-input">
-                      <input type={"text"} placeholder="Enter your email"/>
-                      <button>Start for free</button>
+                      <input type={"text"} placeholder={footer.input}/>
+                      <button>{footer.button_title}</button>
                     </Col>
                 </Row>
+                {
+                    console.log(footer.footer_description && footer.footer_description.title)
+                }
                 <Row className="footer-description">
                     <Col md={6} lg={3} className="footer-part1">
-                        <h2>Fastland</h2>
-                        <p className="para-text">The best medicines & biggest
-                            brands within 30 minutes at your
-                            home. Experience the power of
-                            MedCartel today.</p>
+                        <h2>{footer.footer_description && footer.footer_description.title}</h2>
+                        <p className="para-text">{footer.footer_description && footer.footer_description.subtitle}</p>
                     </Col>
-                    <Col md={6} lg={3} className="footer-part2">
-                        <h3>company</h3>
-                        <ul>
-                            <li>About us</li>
-                            <li>Privacy Policy</li>
-                            <li>Terms & Conditions</li>
-                            <li>Reviews</li>
-                            <li>Contact</li>
-                        </ul>
-                    </Col>
-                    <Col md={6} lg={3} className="footer-part2">
-                        <h3>More links</h3>
-                        <ul>
-                            <li>About us</li>
-                            <li>Privacy Policy</li>
-                            <li>Terms & Conditions</li>
-                            <li>Reviews</li>
-                            <li>Contact</li>
-                        </ul>
-                    </Col>
+                    {
+                        footer.footer_description?footer.footer_description.footerdata.map((value,index)=>{
+                          return <Col md={6} lg={3} className="footer-part2" key={index}>
+                              <h3>{value.title}</h3>
+                              <ul>
+                                  {
+                                      value.datas.map((value1,index1)=>{
+                                          return <li key={value1}>{value1}</li>
+                                      })
+                                  }
+                              </ul>
+                          </Col>
+                        }):""
+                    }
                     <Col md={6} lg={3} className="footer-part4">
                         <h3>Contact details</h3>
                         <span className="mt-3">
@@ -62,7 +54,7 @@ const Footer = () => {
                             </p>
                         </span>
                         <span className="mt-3">
-                            <i className="fa fa-envelope-o" aria-hidden="true"></i>
+                            <i className="fa fa-envelope-o" aria-hidden="true"/>
                             <p>info@medcartel.com</p>
                         </span>
                     </Col>

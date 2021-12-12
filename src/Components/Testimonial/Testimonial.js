@@ -1,36 +1,16 @@
 import {Col, Container, Row} from "react-bootstrap";
 import "./testimonial.scss"
-const testidata=[
-    {
-        para:"Create custom landing pages with Fastland that converts more visitors than any website. Easy, Reliable & Fast.",
-        image:"/Images/user1.png",
-        title:"John Doe",
-        designation:"Product Designer"
-    },
-    {
-        para:"Create custom landing pages with Fastland that converts more visitors than any website. Easy, Reliable & Fast.",
-        image:"/Images/user2.png",
-        title:"Tiana Dokidis",
-        designation:"CMO,Dotcorn",
-    },
-    {
-        para:"Create custom landing pages with Fastland that converts more visitors than any website. Easy, Reliable & Fast.",
-        image:"/Images/user3.png",
-        title:"Talan Bergson",
-        designation:"CEO,Greener"
-    }
-]
-const Testimonial = () => {
+const Testimonial = ({testidata}) => {
     return(
             <section className="testimonial">
                 <Container>
                     <Row>
                         {
                             testidata.map((value,index)=>{
-                                return <Col md={6} lg={4} className="testi-col">
+                                return <Col md={6} lg={4} className="testi-col" key={index}>
                                     <div className="stars d-flex mb-3">
                                     { [...Array(5)].map((value,i)=>(
-                                    <i className="fa fa-star" aria-hidden="true"/>
+                                    <i className="fa fa-star" aria-hidden="true" key={i}/>
                                     ))}
                                     </div>
 

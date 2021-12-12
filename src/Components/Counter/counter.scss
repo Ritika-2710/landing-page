@@ -10,4 +10,13 @@
       font-weight: 600;
     }
   }
+  @media (max-width:576px )
+  {
+    .counter-container{
+      padding-left: 30px;
+        .counter-col{
+          margin-top: 30px;
+        }
+    }
+  }
 }

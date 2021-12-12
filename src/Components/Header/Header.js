@@ -1,32 +1,10 @@
 import {Col, Container, Row} from "react-bootstrap";
 import "./header.scss"
 import {useState} from "react";
-const data = [
-    {
-        title:"Home",
-        subdata:["Marketing","Project Management","IT Services","Services","Agency","Digital Agency","App Presenting","Startup"],
-    },
-    {
-        title:"Pages",
-        subdata:["About Us","Blog","Careers","Pricing","Account","Utility","Contact"]
-    },
-    {
-        title:"Portfolios",
-        subdata:["About Us","Blog","Careers","Pricing","Account","Utility","Contact"]
-    },
-    {
-        title:"Blogs",
-        subdata:["About Us","Blog","Careers","Pricing","Account","Utility","Contact"]
-    },
-    {
-        title:"Contact",
-        subdata:[`Contact&nbsp;One`,"Contact&nbsp;Two",]
-    },
-]
-const Header = ()=>
-{
-    const [showDiv,setshowDiv] = useState(false);
-    return(
+import {Link} from "react-router-dom";
+const Header = ({header_data})=> {
+    const [isMobile,issetMobile] = useState(false);
+    return (
         <section>
             <Container fluid>
                 <Row>
@@ -35,35 +13,39 @@ const Header = ()=>
                             <h2>FASTLAND</h2>
                         </div>
                         <div className="menu">
-                            <ul className="header-ul">
+                            <ul className={"header-ul " +(isMobile ? "mobile-menu" : "")} onClick={()=>issetMobile(!isMobile)}>
                                 {
-                                    data.map((value,index) =>
-                                    {
-                                       return (
-                                           <li className="header-li" key={index}>
-                                                <span >
+                                    header_data.map((value, index) => {
+                                        return (
+                                            <li className="header-li" key={index}>
+                                                <span>
                                                     {value.title}
                                                 </span>
-                                               <div className="li-div">
-                                                   <ul className="li-div-ul">
-                                                       {
-                                                           value.subdata.map((value1,index1)=>{
-                                                               return <li className="li-div-li" dangerouslySetInnerHTML={{__html:value1}} />
+                                                <div className="li-div">
+                                                    <ul className="li-div-ul">
+                                                        {
+                                                            value.subdata.map((value1, index1) => {
+                                                                return <li className="li-div-li" key={index1}
+                                                                           dangerouslySetInnerHTML={{__html: value1}}/>
 
-                                                           })
-                                                       }
-                                                   </ul>
-                                               </div>
-                                           </li>
-                                           )
+                                                            })
+                                                        }
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        )
                                     })
                                 }
                             </ul>
                         </div>
                     </Col>
-                    <Col md={6} lg={6} className="header-part2">
-                        <p className="para-text header-login">Login</p>
+                    <Col md={6} lg={6} className={"header-part2 "  +(isMobile ? "mobile-btn" : "")} onClick={()=>issetMobile(!isMobile)}>
+                       <p className={"para-text header-login "}><Link to={"/Login"}>Login</Link></p>
                         <button className="button">Get Started</button>
+                        <button className="mobile-menu-icon btn btn-primary" onClick={()=>issetMobile(!isMobile)}>
+                            {isMobile ? <i className="fa fa-times" aria-hidden="true"/> :
+                                <i className="fa fa-bars" aria-hidden="true"/>}
+                        </button>
                     </Col>
                 </Row>
             </Container>

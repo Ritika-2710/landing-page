@@ -1,18 +1,14 @@
 import {Col, Container, Row} from "react-bootstrap";
 import "./service.scss"
-const Service = () => {
+const Service = ({service_data}) => {
     return(
         <section className="service">
             <Container>
                 <Row>
                     <Col lg={6}>
                         <div className="service-text">
-                            <h1>Save your extra
-                                money by using
-                                our service.</h1>
-                            <p className="para-text mt-3 mb-5">Create custom landing pages with Fastland
-                                that converts more visitors than any
-                                website. Easy, Reliable & Fast.</p>
+                            <h1>{service_data.title}</h1>
+                            <p className="para-text mt-3 mb-5">{service_data.subtitle}</p>
                         </div>
                     </Col>
                     <Col lg={6} className="service-card">
@@ -32,10 +28,10 @@ const Service = () => {
                         </div>
                         <div className="service-images">
                             <div className="service-image1">
-                                <img src={"/Images/service1.png"} alt={"Image Not Found"}/>
+                                <img src={service_data.images && service_data.images[0]} alt={"Image Not Found"}/>
                             </div>
                             <div className="service-image2">
-                                <img src={"/Images/service2.png"} alt={"Image Not Found"}/>
+                                <img src={service_data.images && service_data.images[1]} alt={"Image Not Found"}/>
                             </div>
                         </div>
                     </Col>

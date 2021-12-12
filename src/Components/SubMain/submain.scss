@@ -48,6 +48,20 @@
         }
       }
     }
+    @media (max-width: 560px) {
+      .submain-heading{
+        padding: 0;
+
+        h1{
+          font-size: 35px;
+        }
+      }
+      .submain-text{
+        p{
+          font-size: 17px;
+        }
+      }
+    }
   }
 
 }

@@ -1,22 +1,20 @@
 import {Col, Container, Row} from "react-bootstrap";
 import "./features.scss"
-const Features = () =>
+const Features = ({feature_data}) =>
 {
     return(
         <section className="features">
             <div className="feature-image1">
-                <img src={"/Images/spiral.png"} alt={"image not found"}/>
+                <img src={feature_data.images?feature_data.images[0]:""} alt={"image not found"}/>
             </div>
             <div className="feature-image2">
-                <img src={"/Images/circle.png"} alt={"image not found"}/>
+                <img src={feature_data.images?feature_data.images[1]:""} alt={"image not found"}/>
             </div>
           <Container>
               <Row>
                   <Col className="features-col-1">
-                      <h1>Best features available<br/>
-                          for your social marketing.</h1>
-                      <p className="mt-4">Create custom landing pages with Fastland that converts<br/>
-                          more visitors than any website. Easy & Fast.</p>
+                      <h1 dangerouslySetInnerHTML={{__html:feature_data.title}}/>
+                      <p className="mt-4" dangerouslySetInnerHTML={{__html:feature_data.subtitle}}/>
                   </Col>
               </Row>
               <Row className="mt-5 features-row">
@@ -28,20 +26,15 @@ const Features = () =>
                       </ul>
                   </Col>
                   <Col lg={9} className="features-col-3">
-                      <div className="number-div">
-                          <h1>01.</h1>
-                          <h4 className="mt-4 mb-4">Real data access</h4>
-                          <p className="para-text">Create custom landing pages with
-                              Fastland that converts more visitors
-                              than any website.</p>
-                      </div>
-                      <div className="number-div">
-                          <h1>02.</h1>
-                          <h4 className="mt-4 mb-4">Real data access</h4>
-                          <p className="para-text">Create custom landing pages with
-                              Fastland that converts more visitors
-                              than any website.</p>
-                      </div>
+                      {
+                          feature_data.number_div?feature_data.number_div.map((value,index)=>{
+                             return <div className="number-div" key={index}>
+                                  <h1>{value.number}</h1>
+                                  <h4 className="mt-4 mb-4">{value.title}</h4>
+                                  <p className="para-text">{value.subtitle}</p>
+                              </div>
+                          }) : ""
+                      }
                   </Col>
               </Row>
           </Container>

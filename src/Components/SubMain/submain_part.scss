@@ -4,13 +4,20 @@
     width: 150px;
     height: 150px;
     background:orange;
-    border-radius: 50%;
+    border-radius:50%;
     padding:15px 20px;
+    color:#fff;
+    font-size: 18px;
   }
   .submain-text{
       padding-right: 32%;
     line-height: 28px;
     margin-top: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .submain-part{
+    padding-left: 30px;
   }
 }
 
