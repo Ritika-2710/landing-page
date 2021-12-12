@@ -51,6 +51,7 @@
       }
     }
   }
+
   .main-secondpart {
     position: relative;
      display: flex;
@@ -282,6 +283,11 @@
     {
       order:1;
       margin-top: 12%;
+    }
+  }
+  @media (max-width: 400px) {
+    .main-firstpart{
+      margin-left: 0;
     }
   }
 }
