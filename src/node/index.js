@@ -164,29 +164,27 @@ app.use(session({
 }));
 
 app.use(cookieParser());
-var session1;
+let session1="";
 app.get("/api", (req, res) => {
     res.send("hello world");
 });
 app.post("/store-data", (req, res) => {
     res.send(constant)
 });
-app.post("/login-credentials", (req, res) => {
+app.post("/login-credentials", (req, res,next) => {
 
     const data = req.body;
-    // res.setHeader("Content-Type","text/html");
     session1=req.session;
     session1.email = data.email;
     req.session.save(function(err) {
         console.log("index.js>175 session saved");
-        console.log("index.js>183",session1.email);
         return res.send("user is logged in");
     })
 
 });
 app.get("/get_information",(req,res)=>{
-    session1=req.session;
     console.log("index.js>180",session1.email);
+    res.send(session1.email);
 })
 
 const PORT = process.env.PORT || 3005;

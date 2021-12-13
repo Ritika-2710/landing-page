@@ -17,8 +17,10 @@ const Login = () => {
                 "content-type": "application/json"
             },
         }
-    ).then(response=>
-        history('/Index')
+    ).then(response=> {
+            console.log(response)
+            history('/Index')
+        }
     ).catch(error => {console.log(error)})
         console.log(email,password);
         e.preventDefault();
